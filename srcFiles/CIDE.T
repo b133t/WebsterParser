@@ -4905,7 +4905,7 @@ Imprints the secret bias of the soul.</q> <rj><qau>Akenside.</qau></rj><br/
 [<source>1913 Webster</source>]</p>
 
 <p><ent>Tat</ent><br/
-<hw>Tat</hw> <pr>(t<acr/t)</pr>, <pos>n.</pos> <ety>[Hind. <ets><tsdo/<amac/<tsdo/</ets>.]</ety> <def>Gunny cloth made from the fiber of the <spn>Corchorus olitorius</spn>, or jute.</def> <mark>[India]</mark><br/
+<hw>Tat</hw> <pr>(t<acr/t)</pr>, <pos>n.</pos> <ety>[Hind. <ets><tsdot/<amac/<tsdot/</ets>.]</ety> <def>Gunny cloth made from the fiber of the <spn>Corchorus olitorius</spn>, or jute.</def> <mark>[India]</mark><br/
 [<source>1913 Webster</source>]</p>
 
 <p><ent>Tat</ent><br/
