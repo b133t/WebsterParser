@@ -14,7 +14,17 @@ This project parses these original text files and creates a reasonably clean UTF
 
 #### How to build
 
-With NodeJS installed, run 
+Get the submodule(s). Run:
+```
+git submodule update --init
+```
+Or, after pull, to update the submodule(s). Run:
+```
+git submodule update --remote
+```
+
+Build it!
+With NodeJS installed, run:
 ````
 npm install
 node index.js
@@ -32,3 +42,29 @@ On your iDevice dowload any new stock dictionary (Select a word -> Define -> Man
 In your SSH browser find out which folder was just added. Navigate to folderwithcrypticnumber/AssetData. Replace the .dictionary folder with the webster.dictionary folder, but keeping the name. You should now be able to lookup words. 
 
 I don't know how to change the name of the dictionary in the list, pointers are welcome.
+
+
+### Notes
+
+* When running index.js, the following unknown entities pop up. Maybe someone will one day track these down:
+    ```
+    sb
+    integral2l
+    colret
+    filig
+    ffllig
+    fllig
+    astascending
+    astdescending
+    ai
+    dot
+    lbrace2
+    rbrace2
+    Prime
+    8star
+    upslur
+    downslur
+    tsdo
+    ecrl
+    colbreak
+    ```

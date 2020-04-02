@@ -42,10 +42,10 @@ function replaceEntities(string) {
     } else if (text.indexOf('frac') == 0) {
       // There are two forms frac1x5000 and frac34
       text = text.replace(/frac(\d+?)x(\d+)/g, function (v, a, b) {
-        return '<sup>' + a + '</sup>' + '&frasl;' + '<sub>' + b + '</sub>';
+        return '<sup>' + a + '</sup>' + '&#x2044;' + '<sub>' + b + '</sub>';
       });
       text = text.replace(/frac(\d)(\d+)/g, function (v, a, b) {
-        return '<sup>' + a + '</sup>' + '&frasl;' + '<sub>' + b + '</sub>';
+        return '<sup>' + a + '</sup>' + '&#x2044;' + '<sub>' + b + '</sub>';
       });
       return text;
     } else {
@@ -65,10 +65,15 @@ function replaceEntities(string) {
 
 function replaceVarious(string) {
   // Remove comments
-  string = string.replace(/<\!--.*?-->/g, '');
+  //string = string.replace(/<\!--.*?-->/g, '');
+
+  // gcide files have non-xml comments
+  string = string.replace(/<---*/g, '<!--');
+  string = string.replace(/---*>/g, '-->');
 
   // Nicer long dashes
-  string = string.replace(/--/g, '–');
+  //string = string.replace(/--/g, '–');
+  string = string.replace(/(?<!\<\!)--(?!>)/g, '–');
   string = string.replace(/---/g, '–');
 
   //Double bar
@@ -128,7 +133,7 @@ function greekToUTF8(input) {
 
 
 function processFiles() {
-  dir.readFiles('srcFiles', {
+  dir.readFiles('gcide', {
     match: FILEGREP
     }, function(err, content, next) {
         if (err) throw err;
@@ -215,7 +220,7 @@ function parseFile(file) {
     if (ONLYWEBSTER) {
       var src = $(this).find('source');
 
-      if (src.text() !== '1913 Webster') {
+      if (src.text() !== '1913 Webster' && src.text() !== 'Webster 1913 Suppl.') {
         return true;
       }
 

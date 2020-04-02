@@ -1,0 +1,4 @@
+[submodule "gcide"]
+	path = gcide
+	url = https://git.savannah.gnu.org/git/gcide.git
+	branch = master

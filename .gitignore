@@ -2,4 +2,6 @@ template/objects/
 template/objects/**
 template/dict.xml
 output/dict.json
+output/dictPrelim.json
 node_modules
+package-lock.json
